@@ -15,7 +15,7 @@ class Building{
             score -= this.cost;
             this.amountOwned++;
             this.cps = this.baseCps * this.amountOwned;
-            this.cost = Math.ceil(this.cost * 1.15**this.amountOwned);
+            this.cost = Math.ceil(this.cost * 1.15);
 
         }
     }
