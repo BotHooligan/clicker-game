@@ -6,7 +6,6 @@ class Upgrade{
         this.multiplier = 1;
         this.upgradeMultiplier = upgradeMultiplier;
         this.buttonId = buttonId;
-        this.visible = false;
         this.bought = false;
     }
 
@@ -20,16 +19,22 @@ class Upgrade{
     }
 
     buttonState(){
-        if (this.bought)
-        if (!this.visible){
-            document.getElementById(this.buttonId).style.display = "none";
-            
-            if (score >= this.baseCost){
-                this.visible = true;
+        if (!this.bought)
+        {
+            if (score>=this.cost)
+            {
                 document.getElementById(this.buttonId).style.display = 'initial';
+            }
+            else 
+            {
+                document.getElementById(this.buttonId).style.display = 'none';
             }
         }
 
+        if (this.bought == true)
+        {
+            document.getElementById(this.buttonId).style.display = 'none';
+        }
 
         document.getElementById(this.buttonId).innerHTML = this.upgradeMultiplier + 'x wood from' + '<br>' + this.toolName;
     }
