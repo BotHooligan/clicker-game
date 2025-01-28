@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="src/upgrades.js"></script>
     <script src="src/building.js"></script>
+    <script src="src/upgrades.js"></script>
+    <script src="src/sharpen.js"></script>
     <script src="src/main.js"></script>
     <title>Tree Chopper</title>
 </head>
@@ -13,8 +14,6 @@
     <h2>Too many tree... must chop</h2>
     <h3>
         Wood: <span class="score" id="score">0</span>
-
-       <!-- Wps: <span class="wps" id="wps">0</span> -->
     </h3>
     <button type="button" onclick="scorePlusPlus()">Chop!</button>
 
@@ -24,6 +23,8 @@
     <button type="button" id="buyChainsaw" onclick="chainsaw.purchase()"></button>
 
     <h4>Upgrades</h4>
-    <button type="button" id="sharpenSaw" onclick="sharpenSaw.purchase()">Sharpen Saw</button>
+    <button type="button" id="buySharpenSaw" onclick="sharpenSaw.purchase()"> Sharpen Saw (2xWps)</button>
+    <button type="button" id="buySharpenAxe" onclick="sharpenAxe.purchase()"> Sharpen Axe (2xWps)</button>
+   
 </body>
 </html>

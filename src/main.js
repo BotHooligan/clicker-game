@@ -1,48 +1,45 @@
 const tickRate = 1000 / 30; // 30 FPS
 
-let score = 100;
-// let wps = 0;
-
-let saw = new Building('Saw', 0.1, 15, 'buySaw')
-let axe = new Building('Axe', 0.25, 100, 'buyAxe');
-let chainsaw = new Building('Chainsaw', 1, 1000, 'buyChainsaw');
-
-let sharpenSaw = new Upgrade('SharpenSaw', 100, 2, 'sharpenSaw', 'Saw');
- 
+let clickStrength = 1;
+let score = 500;
 
 
+
+let saw = new Building('Saw', 0.1, 15);
+let axe = new Building('Axe', 0.25, 100);
+let chainsaw = new Building('Chainsaw', 1, 1000);
+
+let sharpenSaw = new sharpen('Sharpen Saw', 100, saw);
+
+let sharpenAxe = new sharpen('Sharpen Axe', 500, axe);
+//Update Score for each click
 function scorePlusPlus(){
-    score++;
+    score += clickStrength;
 }
 
-// function wpsState(){
-//     saw.cps = saw.cps * sharpenSaw.multiplier;
-
-//     wps = saw.cps + saw.cps + chainsaw.cps;
-// }
 
 function incScore(){
     score += saw.cps;
-    score += saw.cps;
+    score += axe.cps;
     score += chainsaw.cps;
-
 }
 
 function updateButtons(){
+    saw.buttonState();
     axe.buttonState();
     chainsaw.buttonState();
-    saw.buttonState();
     sharpenSaw.buttonState();
+    sharpenAxe.buttonState();
+
 }
 
 function updatePage(){
     incScore();
-    // wpsState();
     updateButtons();
+
+    //update score display
     document.getElementById("score").innerHTML = 
     Math.floor(score).toLocaleString();
-    // document.getElementById('wps').innerHTML =
-    // wps.toLocaleString();
 }
 
 setInterval(updatePage, tickRate);
