@@ -1,14 +1,11 @@
-class sharpen extends Upgrade {
-  constructor(upgradeName, cost, building) {
+class strengthen extends Upgrade {
+  constructor(upgradeName, cost) {
     super(upgradeName, cost);
-    this.building = building;
-    this.buildingName = building;
   }
 
-  purchase() {
+  strengthen() {
     super.purchase();
-    this.building.doubleUpgrade++;
-    this.building.applyDU();
+    clickStrength *= 2;
   }
 
   buttonState() {
@@ -18,6 +15,6 @@ class sharpen extends Upgrade {
       " (Cost: $" +
       Math.ceil(this.cost).toLocaleString() +
       ")" +
-      "(2x wps)";
+      "(2x wps per click)";
   }
 }

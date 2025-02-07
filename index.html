@@ -7,22 +7,23 @@
     <script src="src/building.js"></script>
     <script src="src/upgrades.js"></script>
     <script src="src/sharpen.js"></script>
+    <script src="src/strengthen.js"></script>
     <script src="src/main.js"></script>
     <title>Tree Chopper</title>
   </head>
   <body>
     <header>
       <h1>
-        <img src="pngtree.png" width="200" height="200" />
+        <img src="media/pngtree.png" width="200" height="200" />
         Tree Chopper
-        <img src="pngtree.png" width="200" height="200" />
+        <img src="media/pngtree.png" width="200" height="200" />
       </h1>
       <h2>Too many tree... must chop</h2>
     </header>
 
     <div class="outer">
       <div class="click">
-        <img src="axecross.webp" width="200" height="200" />
+        <img src="media/axecross.webp" width="200" height="200" />
         <h3>
           Wood: <span class="score" id="score">0</span>
 
@@ -126,6 +127,62 @@
             onclick="sharpenHacker.purchase()"
           >
             Sharpen Super Axe Hacker (2xWps)
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="buySharpenHands"
+            onclick="sharpenHands.strengthen()"
+          >
+            Sharpen hands (2x wps per click)
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="buySawArms"
+            onclick="sharpenHands2.strengthen()"
+          >
+            Saws for arms (2x wps per click)
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="buyAxeLegs"
+            onclick="sharpenHands3.strengthen()"
+          >
+            Axes for Hands (2x wps per click)
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="buyChainsawHead"
+            onclick="sharpenHands4.strengthen()"
+          >
+            Chainsaw Head (2x wps per click)
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="buyLaserEyes"
+            onclick="sharpenHands5.strengthen()"
+          >
+            Laser Eyes (2x wps per click)
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="buyCloneYourself"
+            onclick="sharpenHands6.strengthen()"
+          >
+            Clone Yourself (2x wps per click)
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="buyExplosiveDiarrhea"
+            onclick="sharpenHands7.strengthen()"
+          >
+            Explosive Diarrhea (2x wps per click)
           </button>
         </div>
       </div>
